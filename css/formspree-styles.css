@@ -1,0 +1,35 @@
+/* ---- Append to css/style.css ---- */
+
+/* Honeypot: hidden from humans, visible to bots */
+.form .hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Form status states */
+.form-status:empty { display: none; }
+
+.form-status {
+  margin-top: 1.2rem;
+  line-height: 1.5;
+}
+
+.form-status.is-pending { opacity: .7; }
+
+.form-status.is-success {
+  color: #4a6b52;
+  font-weight: 500;
+}
+
+.form-status.is-error {
+  color: #9a4a3c;
+}
+
+/* Submit button while sending */
+.form .btn[disabled] {
+  opacity: .6;
+  cursor: progress;
+}

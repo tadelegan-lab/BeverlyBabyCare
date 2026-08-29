@@ -68,15 +68,18 @@
           <a href="https://www.instagram.com/beverlybabycare/" rel="noopener" target="_blank">Instagram</a> and
           <a href="https://www.tiktok.com/@beverlybabycare26" rel="noopener" target="_blank">TikTok</a>.</p>
       </div>
+      <img src="assets/contact.jpg" alt="A caregiver cradling a swaddled newborn beside a bassinet in a softly lit bedroom" width="2240" height="2784" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;margin-top:2rem;border-radius:14px">
     </div>
     <div class="reveal">
-      <form class="form" id="consult-form" novalidate>
+      <form class="form" id="consult-form" action="https://formspree.io/f/maeynbdb" method="POST">
+        <input type="hidden" name="_subject" value="New consultation request - Beverly Baby Care">
+        <p class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
         <div class="field">
           <label for="name">Parent / guardian name</label>
-          <input id="name" name="Name" type="text" autocomplete="name" required>
+          <input id="name" name="name" type="text" autocomplete="name" required>
         </div>
         <div class="field-row">
-          <div class="field"><label for="email">Email</label><input id="email" name="Email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
           <div class="field"><label for="phone">Phone</label><input id="phone" name="Phone" type="tel" autocomplete="tel"></div>
         </div>
         <div class="field-row">
@@ -110,8 +113,8 @@
           <label for="about">Tell Beverly about your family</label>
           <textarea id="about" name="About your family" placeholder="What kind of support are you looking for?"></textarea>
         </div>
-        <button class="btn btn--primary" type="submit">Request My Consultation</button>
-        <p class="form-status" id="form-status" role="status"></p>
+        <button class="btn btn--primary" id="consult-submit" type="submit">Request My Consultation</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         <p class="small" style="margin-top:1rem">Your details are used only to respond to your inquiry. Private &amp; confidential.</p>
       </form>
     </div>
@@ -198,5 +201,6 @@
 </footer>
 <div class="mobile-cta"><a class="btn btn--primary" href="contact.html">Book a Consultation</a></div>
 <script src="js/site.js" defer></script>
+<script src="js/formspree.js" defer></script>
 </body>
 </html>
